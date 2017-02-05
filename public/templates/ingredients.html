@@ -1,0 +1,13 @@
+<section>
+<ul id="ingredientsContainer">
+    <li id="ingredientCount" class="ui-box" ng-repeat="ingredient in ingredients">
+        <div class="inner-ui-box">
+            <h1>{{ ingredient.name }}</h1>
+            <h2>{{ ingredient.count }} in stock.</h2>
+            <input type="text" placeholder="{{ingredient.placeholder}}">
+            <buy-button clicked-on="buy(ingredient)" subtract="ingredient"></buy-button>
+        </div>
+    </li>
+</ul>
+
+</section>

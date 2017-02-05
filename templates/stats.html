@@ -1,0 +1,13 @@
+<section id="statsSection">
+    <h1>Are you keeping count?</h1>
+    
+        <ul id="statsContainer">
+            <li class="statsBoxes ui-box" ng-repeat="stat in stats">
+                <div class="inner-ui-box">
+                    <h1>{{ stat.name }}</h1>
+                    <h2>$ {{ stat.count }}</h2>
+                </div>
+            </li>
+        </ul>
+    
+</section>

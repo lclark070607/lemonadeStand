@@ -4,17 +4,110 @@
 @include foundation-grid;
 
 
+//header
+#title-img {
+    @include grid-row();
+}
+img {
+    @include grid-column(4);
+    width: 20%;
+    padding: 20px;
+    margin-right: 80px;
+}
 
+h1.title{
+    @include grid-column(8);
+    font-family: 'Barrio', cursive;
+    text-align: center;
+    font-size: 4.5em;
+    padding: 100px;
+    margin-left: 60px;
+}
+
+//main
 body {
+    @include grid-row();
     background-color:yellow;
 }
 
+.start-page {
+    height: 250px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+h1 {
+    font-family: 'Barrio', cursive;
+    text-align: center;
+    color: blue;
+    }
+
+.ui-box {
+    
+    padding: 20px;
+}
+
+.inner-ui-box {
+    background-color: white;
+    border: 4px dashed blue;
+    text-align: center;
+}
+
+
+input {
+    @include grid-column(6);
+    padding: 20px;
+    border: 2px dashed blue;
+    margin-left: 20px;
+   
+}
+// #statsSection
+#statsBox, #ingredientBox {
+    @include grid-row();
+   
+}
+
+#ingredientCount {
+    @include grid-column(3);
+    text-decoration-style: none;
+    list-style-type: none;
+
+}
+ul#statsContainer, ul#ingredientsContainer {
+    padding: 0;
+    @include grid-row();
+    
+    // display: flex;
+    // justify-content: space-around;
+}
+
+li.statsBoxes {
+    @include grid-column(3);
+    text-decoration-style: none;
+    list-style-type: none;
+}
 h1 {
     color: blue;
+    text-align: center;
+    font-family: 'Barrio', cursive;
 }
 
 button {
-    background-color: white;
-    padding: 1%;
-    color: blue;
+    background-color: blue;
+    padding: 20px;
+    color: white;
+}
+
+.startbtn {
+    @include grid-row();
+}
+button.start {
+    align-items: center;
+}
+
+
+footer {
+    @include grid-row();
+    text-align: center;
+    margin-top: 100px;
 }

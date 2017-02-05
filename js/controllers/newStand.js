@@ -7,7 +7,7 @@ function Stand(name) {
 
 module.exports = {
     name: 'NewStandController',
-    func: function ($scope, IdService) {
+    func: function ($scope, $state, IdService) {
         //default values
         $scope.name = '';
 
@@ -19,7 +19,9 @@ module.exports = {
             IdService.add(newStand);
 
             $scope.name = '';
-
+            // Re-route to the 'show-game' state.
+            $state.go('show-game');
+            
         };
     }
 }

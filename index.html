@@ -7,38 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
     <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <script src="app.js"></script>
 </head>
 
 <body ng-app="LemonadeApp">
 
-    <h1>Lemonade Stand Game</h1>
+    <div id="title-img">
+        <h1 class="title">Lemonade Stand</h1>
+        <img src="http://i67.tinypic.com/b803eh.png"></img>
+    </div>
 
-    <!--Start View-->
+    Start View-->
+    <div class="start-page">
+        <h1>Start Your Stand</h1>
     <section ng-controller="NewStandController">
-
-        <h1>Start Your Lemonade Business</h1>
-                <input type="text" name="stand_name" ng-model="name" placeholder="Name your stand!">
-                <button ng-click="newStand()" ui-sref="show-details">Get Started</button>
-
+        <div class="inputbox">
+            <input type="text" name="stand_name" ng-model="standName" placeholder="Name your stand!">
+        </div>
+        <div class="startbtn">
+            <button ng-click="newStand()">Get Started</button>
+        </div>
     </section>
 
+    <div>
 
-    <!--Stand Manager View-->
-   
-    <section ng-controller="IngredientListController">
-        <ul id="itemsList">
-
-            <li ng-repeat="item in items">
-                <h2>{{ item.name }}</h2>
-                        <p>There are{{ item.count }}available.</p>
-                        <buy-button tapped-on="buy(item)" bought="item">Buy</buy-button>
-            </li>
-
-        </ul>
-    </section>
-
-
+    <ui-view></ui-view>
 
     <footer>
         <h3>Copyright 2047, EatMoreLemons Enterprises</h3>
